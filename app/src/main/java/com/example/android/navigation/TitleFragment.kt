@@ -25,13 +25,13 @@ class TitleFragment : Fragment() {
 //        binding.playButton.setOnClickListener {
 //            Navigation.findNavController(it).navigate(R.id.action_titleFragment_to_gameFragment)
 //        }
-//        binding.playButton.setOnClickListener { view: View ->
-//            view.findNavController().navigate(R.id.action_titleFragment_to_gameFragment)
-//        }
+        binding.playButton.setOnClickListener { view: View ->
+            view.findNavController().navigate(TitleFragmentDirections.actionTitleFragmentToGameFragment())
+        }
 
-        binding.playButton.setOnClickListener(
-                Navigation.createNavigateOnClickListener(R.id.action_titleFragment_to_gameFragment)
-        )
+//        binding.playButton.setOnClickListener(
+//                Navigation.createNavigateOnClickListener(R.id.action_titleFragment_to_gameFragment)
+//        )
         setHasOptionsMenu(true)
         return binding.root
     }
